@@ -6,8 +6,8 @@ package Class;
 
 /**
  *
- * @author User
+ * @author dwiap
  */
-public class Security {
+public class PetugasJaga {
     
 }
