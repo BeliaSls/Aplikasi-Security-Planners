@@ -35,14 +35,14 @@ public class Jadwal extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        btdashboard = new javax.swing.JButton();
+        btpetugas = new javax.swing.JButton();
+        btjadwal = new javax.swing.JButton();
+        btlokasi = new javax.swing.JButton();
+        btlogout = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        bttambah_jadwal = new javax.swing.JButton();
+        bttjadwal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         btedit = new javax.swing.JButton();
@@ -138,58 +138,58 @@ public class Jadwal extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(51, 0, 153));
 
-        jButton5.setBackground(new java.awt.Color(51, 0, 153));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Dashboard");
-        jButton5.setBorder(null);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btdashboard.setBackground(new java.awt.Color(51, 0, 153));
+        btdashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btdashboard.setForeground(new java.awt.Color(255, 255, 255));
+        btdashboard.setText("Dashboard");
+        btdashboard.setBorder(null);
+        btdashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btdashboardActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(51, 0, 153));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Petugas");
-        jButton7.setBorder(null);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btpetugas.setBackground(new java.awt.Color(51, 0, 153));
+        btpetugas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btpetugas.setForeground(new java.awt.Color(255, 255, 255));
+        btpetugas.setText("Petugas");
+        btpetugas.setBorder(null);
+        btpetugas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btpetugasActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(51, 0, 153));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Jadwal");
-        jButton8.setBorder(null);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btjadwal.setBackground(new java.awt.Color(51, 0, 153));
+        btjadwal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btjadwal.setForeground(new java.awt.Color(255, 255, 255));
+        btjadwal.setText("Jadwal");
+        btjadwal.setBorder(null);
+        btjadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btjadwalActionPerformed(evt);
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(51, 0, 153));
-        jButton9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jButton9.setText("Lokasi");
-        jButton9.setBorder(null);
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btlokasi.setBackground(new java.awt.Color(51, 0, 153));
+        btlokasi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btlokasi.setForeground(new java.awt.Color(255, 255, 255));
+        btlokasi.setText("Lokasi");
+        btlokasi.setBorder(null);
+        btlokasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btlokasiActionPerformed(evt);
             }
         });
 
-        jButton10.setBackground(new java.awt.Color(51, 0, 153));
-        jButton10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setText("Logout");
-        jButton10.setBorder(null);
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        btlogout.setBackground(new java.awt.Color(51, 0, 153));
+        btlogout.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btlogout.setForeground(new java.awt.Color(255, 255, 255));
+        btlogout.setText("Logout");
+        btlogout.setBorder(null);
+        btlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                btlogoutActionPerformed(evt);
             }
         });
 
@@ -200,25 +200,25 @@ public class Jadwal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)))
+                    .addComponent(btpetugas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btjadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btlokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btlogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btdashboard, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btdashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btpetugas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btjadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btlokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btlogout, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -241,12 +241,12 @@ public class Jadwal extends javax.swing.JFrame {
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        bttambah_jadwal.setBackground(new java.awt.Color(51, 0, 153));
-        bttambah_jadwal.setForeground(new java.awt.Color(255, 255, 255));
-        bttambah_jadwal.setText("+ Tambah Jadwal");
-        bttambah_jadwal.addActionListener(new java.awt.event.ActionListener() {
+        bttjadwal.setBackground(new java.awt.Color(51, 0, 153));
+        bttjadwal.setForeground(new java.awt.Color(255, 255, 255));
+        bttjadwal.setText("+ Tambah Jadwal");
+        bttjadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttambah_jadwalActionPerformed(evt);
+                bttjadwalActionPerformed(evt);
             }
         });
 
@@ -262,6 +262,11 @@ public class Jadwal extends javax.swing.JFrame {
                 "ID", "Petugas", "Lokasi", "Tanggal", "Shift"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         btedit.setBackground(new java.awt.Color(51, 0, 153));
@@ -295,7 +300,7 @@ public class Jadwal extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(bttambah_jadwal))
+                                .addComponent(bttjadwal))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
@@ -312,7 +317,7 @@ public class Jadwal extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bttambah_jadwal))
+                    .addComponent(bttjadwal))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -353,29 +358,41 @@ public class Jadwal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bttambah_jadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttambah_jadwalActionPerformed
+    private void bttjadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttjadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bttambah_jadwalActionPerformed
+        new TambahJadwal().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bttjadwalActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void btlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+        new LoginAdmin().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btlogoutActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void btlokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlokasiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+        new Lokasi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btlokasiActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void btjadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btjadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+        new Jadwal().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btjadwalActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btpetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btpetugasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+        new PetugasJaga().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btpetugasActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btdashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdashboardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        new Dashboard().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btdashboardActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -404,6 +421,11 @@ public class Jadwal extends javax.swing.JFrame {
     private void bteditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteditActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bteditActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -441,19 +463,19 @@ public class Jadwal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btdashboard;
     private javax.swing.JButton btedit;
     private javax.swing.JButton bthapus;
-    private javax.swing.JButton bttambah_jadwal;
+    private javax.swing.JButton btjadwal;
+    private javax.swing.JButton btlogout;
+    private javax.swing.JButton btlokasi;
+    private javax.swing.JButton btpetugas;
+    private javax.swing.JButton bttjadwal;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
