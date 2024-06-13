@@ -6,7 +6,7 @@ package Class;
 
 /**
  *
- * @author dwiap
+ * @author belia
  */
 public class PetugasJaga {
     

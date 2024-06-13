@@ -8,6 +8,6 @@ package Class;
  *
  * @author User
  */
-public class PosSecurity {
+public class Jadwal {
     
 }

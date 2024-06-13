@@ -8,6 +8,6 @@ package Class;
  *
  * @author User
  */
-public class Schedule {
+public class Lokasi{
     
 }
