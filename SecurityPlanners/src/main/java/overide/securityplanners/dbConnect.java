@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 public class dbConnect {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/jadwaljagadb";
+    private static final String URL = "jdbc:mysql://localhost:3306/jadwal_jaga";
     private static final String USER = "root"; // Change to your MySQL username
     private static final String PASSWORD = ""; // Change to your MySQL password
 
@@ -29,6 +29,7 @@ public class dbConnect {
 
     /**
      * Gets a connection to the database.
+     *
      * @return the database connection
      */
     public static Connection getConnection() {
@@ -37,6 +38,24 @@ public class dbConnect {
         } catch (SQLException e) {
             e.printStackTrace();
             throw new IllegalStateException("Cannot connect the database!", e);
+        }
+    }
+    
+    public static void closeConnection(Connection connection) throws SQLException {
+        if (connection != null) {
+            connection.close();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        try {
+            Connection connection = getConnection();
+            System.out.println("Connection successful");
+            closeConnection(connection);
+        } catch (SQLException e) {
+            System.out.println("Connection failed");
+            e.printStackTrace();
         }
     }
 }

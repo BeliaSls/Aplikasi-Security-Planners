@@ -32,19 +32,19 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        btdashboard = new javax.swing.JButton();
+        btpetugas = new javax.swing.JButton();
+        btjadwal = new javax.swing.JButton();
+        btlokasi = new javax.swing.JButton();
+        btlogout = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btkpetugas = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btkjadwal = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        btklokasi = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -91,58 +91,58 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(51, 0, 153));
 
-        jButton4.setBackground(new java.awt.Color(51, 0, 153));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Dashboard");
-        jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btdashboard.setBackground(new java.awt.Color(51, 0, 153));
+        btdashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btdashboard.setForeground(new java.awt.Color(255, 255, 255));
+        btdashboard.setText("Dashboard");
+        btdashboard.setBorder(null);
+        btdashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btdashboardActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(51, 0, 153));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Petugas");
-        jButton5.setBorder(null);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btpetugas.setBackground(new java.awt.Color(51, 0, 153));
+        btpetugas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btpetugas.setForeground(new java.awt.Color(255, 255, 255));
+        btpetugas.setText("Petugas");
+        btpetugas.setBorder(null);
+        btpetugas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btpetugasActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(51, 0, 153));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Jadwal");
-        jButton6.setBorder(null);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btjadwal.setBackground(new java.awt.Color(51, 0, 153));
+        btjadwal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btjadwal.setForeground(new java.awt.Color(255, 255, 255));
+        btjadwal.setText("Jadwal");
+        btjadwal.setBorder(null);
+        btjadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btjadwalActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(51, 0, 153));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Lokasi");
-        jButton7.setBorder(null);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btlokasi.setBackground(new java.awt.Color(51, 0, 153));
+        btlokasi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btlokasi.setForeground(new java.awt.Color(255, 255, 255));
+        btlokasi.setText("Lokasi");
+        btlokasi.setBorder(null);
+        btlokasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btlokasiActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(51, 0, 153));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jButton8.setText("Logout");
-        jButton8.setBorder(null);
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btlogout.setBackground(new java.awt.Color(51, 0, 153));
+        btlogout.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btlogout.setForeground(new java.awt.Color(255, 255, 255));
+        btlogout.setText("Logout");
+        btlogout.setBorder(null);
+        btlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btlogoutActionPerformed(evt);
             }
         });
 
@@ -153,31 +153,36 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btpetugas, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                    .addComponent(btjadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btlokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btlogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btdashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btdashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btpetugas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btjadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btlokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btlogout, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jButton1.setText("Kelola Petugas");
+        btkpetugas.setText("Kelola Petugas");
+        btkpetugas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btkpetugasActionPerformed(evt);
+            }
+        });
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/reliability_16743127 (1).png"))); // NOI18N
@@ -188,7 +193,7 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                .addComponent(btkpetugas, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -201,16 +206,16 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(btkpetugas)
                 .addContainerGap())
         );
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
 
-        jButton2.setText("Kelola Jadwal");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btkjadwal.setText("Kelola Jadwal");
+        btkjadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btkjadwalActionPerformed(evt);
             }
         });
 
@@ -223,7 +228,7 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btkjadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -236,13 +241,18 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(btkjadwal)
                 .addContainerGap())
         );
 
         jPanel6.setBackground(new java.awt.Color(204, 204, 255));
 
-        jButton3.setText("Lokasi");
+        btklokasi.setText("Lokasi");
+        btklokasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btklokasiActionPerformed(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/route_16755223 (1) (1).png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -253,7 +263,7 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btklokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap(31, Short.MAX_VALUE)
@@ -266,7 +276,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
+                .addComponent(btklokasi)
                 .addContainerGap())
         );
 
@@ -317,29 +327,53 @@ public class Dashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btkjadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btkjadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        new Jadwal().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btkjadwalActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btdashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdashboardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        new Dashboard().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btdashboardActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btpetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btpetugasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        new PetugasJaga().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btpetugasActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btjadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btjadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+        new Jadwal().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btjadwalActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btlokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlokasiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+        new Lokasi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btlokasiActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void btlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+        new LoginAdmin().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btlogoutActionPerformed
+
+    private void btkpetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btkpetugasActionPerformed
+        // TODO add your handling code here:
+        new PetugasJaga().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btkpetugasActionPerformed
+
+    private void btklokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btklokasiActionPerformed
+        // TODO add your handling code here:
+        new Lokasi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btklokasiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -377,14 +411,14 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
+    private javax.swing.JButton btdashboard;
+    private javax.swing.JButton btjadwal;
+    private javax.swing.JButton btkjadwal;
+    private javax.swing.JButton btklokasi;
+    private javax.swing.JButton btkpetugas;
+    private javax.swing.JButton btlogout;
+    private javax.swing.JButton btlokasi;
+    private javax.swing.JButton btpetugas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
