@@ -247,7 +247,8 @@ public class PetugasJaga extends javax.swing.JFrame {
     }//GEN-LAST:event_bjadwalActionPerformed
 
     private void bttambah_petugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttambah_petugasActionPerformed
-        // TODO add your handling code here:
+        new TambahPetugas().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_bttambah_petugasActionPerformed
 
     private void blogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blogoutActionPerformed
@@ -259,7 +260,8 @@ public class PetugasJaga extends javax.swing.JFrame {
     }//GEN-LAST:event_blokasiActionPerformed
 
     private void bteditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteditActionPerformed
-        // TODO add your handling code here:
+        new TambahLokasi().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_bteditActionPerformed
 
     /**
@@ -313,4 +315,8 @@ public class PetugasJaga extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

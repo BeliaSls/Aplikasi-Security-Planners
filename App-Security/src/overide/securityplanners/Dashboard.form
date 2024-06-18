@@ -17,8 +17,6 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="com.toedter.calendar.JCalendar" name="jCalendar1">
-    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -328,6 +326,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Kelola Petugas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -431,6 +432,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Lokasi"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
