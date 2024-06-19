@@ -491,8 +491,7 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbEditActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
-        new TambahJadwal().setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_tbAddActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
