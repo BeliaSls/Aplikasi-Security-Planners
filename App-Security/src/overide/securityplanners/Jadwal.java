@@ -38,11 +38,11 @@ public class Jadwal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btdashboard = new javax.swing.JButton();
+        btpetugas = new javax.swing.JButton();
+        btjadwal = new javax.swing.JButton();
+        btlokasi = new javax.swing.JButton();
+        btlogout = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         dashboard = new javax.swing.JButton();
@@ -73,58 +73,58 @@ public class Jadwal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 0, 153));
 
-        jButton1.setBackground(new java.awt.Color(51, 0, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Dashboard");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btdashboard.setBackground(new java.awt.Color(51, 0, 153));
+        btdashboard.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btdashboard.setForeground(new java.awt.Color(255, 255, 255));
+        btdashboard.setText("Dashboard");
+        btdashboard.setBorder(null);
+        btdashboard.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btdashboardActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 0, 153));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Petugas");
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btpetugas.setBackground(new java.awt.Color(51, 0, 153));
+        btpetugas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btpetugas.setForeground(new java.awt.Color(255, 255, 255));
+        btpetugas.setText("Petugas");
+        btpetugas.setBorder(null);
+        btpetugas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btpetugasActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(51, 0, 153));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Jadwal");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btjadwal.setBackground(new java.awt.Color(51, 0, 153));
+        btjadwal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btjadwal.setForeground(new java.awt.Color(255, 255, 255));
+        btjadwal.setText("Jadwal");
+        btjadwal.setBorder(null);
+        btjadwal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btjadwalActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(51, 0, 153));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Lokasi");
-        jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btlokasi.setBackground(new java.awt.Color(51, 0, 153));
+        btlokasi.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btlokasi.setForeground(new java.awt.Color(255, 255, 255));
+        btlokasi.setText("Lokasi");
+        btlokasi.setBorder(null);
+        btlokasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btlokasiActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(51, 0, 153));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Logout");
-        jButton6.setBorder(null);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btlogout.setBackground(new java.awt.Color(51, 0, 153));
+        btlogout.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btlogout.setForeground(new java.awt.Color(255, 255, 255));
+        btlogout.setText("Logout");
+        btlogout.setBorder(null);
+        btlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btlogoutActionPerformed(evt);
             }
         });
 
@@ -135,25 +135,25 @@ public class Jadwal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(btpetugas, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                    .addComponent(btjadwal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btlokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btlogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btdashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btdashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btpetugas, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btjadwal, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btlokasi, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btlogout, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -459,25 +459,35 @@ public class Jadwal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btlogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+        new LoginAdmin().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btlogoutActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btlokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlokasiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        new Lokasi().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btlokasiActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btjadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btjadwalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        new Jadwal().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btjadwalActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btpetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btpetugasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        new PetugasJaga().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btpetugasActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btdashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdashboardActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new Dashboard().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btdashboardActionPerformed
 
     private void txtIDJadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDJadwalActionPerformed
         // TODO add your handling code here:
@@ -500,29 +510,23 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbAddActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
-        new LoginAdmin().setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_logoutActionPerformed
 
     private void lokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lokasiActionPerformed
-        new Lokasi().setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_lokasiActionPerformed
 
     private void jadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jadwalActionPerformed
-        Jadwal jadwal = new Jadwal();
-        jadwal.setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_jadwalActionPerformed
 
     private void petugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_petugasActionPerformed
-       new PetugasJaga().setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_petugasActionPerformed
 
     private void dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dashboardActionPerformed
-        new Dashboard().setVisible(true);
-        this.dispose();
+
     }//GEN-LAST:event_dashboardActionPerformed
 
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
@@ -573,14 +577,14 @@ public class Jadwal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btdashboard;
+    private javax.swing.JButton btjadwal;
+    private javax.swing.JButton btlogout;
+    private javax.swing.JButton btlokasi;
+    private javax.swing.JButton btpetugas;
     private javax.swing.JComboBox<String> cmdLokasi;
     private javax.swing.JComboBox<String> cmdShift;
     private javax.swing.JButton dashboard;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
