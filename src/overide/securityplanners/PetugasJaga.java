@@ -3,12 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package overide.securityplanners;
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
 /**
  *
  * @author user
  */
 public class PetugasJaga extends javax.swing.JFrame {
+    int x=0;
 
     /**
      * Creates new form PetugasJaga
@@ -35,20 +41,20 @@ public class PetugasJaga extends javax.swing.JFrame {
         blogout = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        bttambah_petugas = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        bthapus = new javax.swing.JButton();
-        btedit = new javax.swing.JButton();
+        tbpetugas = new javax.swing.JTable();
+        btdelete = new javax.swing.JButton();
+        btbersih = new javax.swing.JButton();
         jid = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        txtid = new javax.swing.JTextField();
+        txtpetugas = new javax.swing.JTextField();
+        txtnomor = new javax.swing.JTextField();
+        txtalamat = new javax.swing.JTextField();
         jpetugas = new javax.swing.JLabel();
         jnomor = new javax.swing.JLabel();
         jalamat = new javax.swing.JLabel();
-        Simpan = new javax.swing.JButton();
+        btKeluar = new javax.swing.JButton();
+        btadd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -154,19 +160,10 @@ public class PetugasJaga extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
         );
 
-        bttambah_petugas.setBackground(new java.awt.Color(51, 0, 153));
-        bttambah_petugas.setForeground(new java.awt.Color(255, 255, 255));
-        bttambah_petugas.setText("+ Tambah Petugas");
-        bttambah_petugas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttambah_petugasActionPerformed(evt);
-            }
-        });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbpetugas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -177,43 +174,43 @@ public class PetugasJaga extends javax.swing.JFrame {
                 "ID Petugas", "Nama Petugas", "Nomor Telepon", "Alamat"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbpetugas);
 
-        bthapus.setBackground(new java.awt.Color(51, 0, 153));
-        bthapus.setForeground(new java.awt.Color(255, 255, 255));
-        bthapus.setText("Hapus");
-        bthapus.addActionListener(new java.awt.event.ActionListener() {
+        btdelete.setBackground(new java.awt.Color(51, 0, 153));
+        btdelete.setForeground(new java.awt.Color(255, 255, 255));
+        btdelete.setText("Delete");
+        btdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bthapusActionPerformed(evt);
+                btdeleteActionPerformed(evt);
             }
         });
 
-        btedit.setBackground(new java.awt.Color(51, 0, 153));
-        btedit.setForeground(new java.awt.Color(255, 255, 255));
-        btedit.setText("Edit");
-        btedit.addActionListener(new java.awt.event.ActionListener() {
+        btbersih.setBackground(new java.awt.Color(51, 0, 153));
+        btbersih.setForeground(new java.awt.Color(255, 255, 255));
+        btbersih.setText("Bersihkan");
+        btbersih.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bteditActionPerformed(evt);
+                btbersihActionPerformed(evt);
             }
         });
 
         jid.setText("ID Petugas");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtidActionPerformed(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txtnomor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txtnomorActionPerformed(evt);
             }
         });
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtalamat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtalamatActionPerformed(evt);
             }
         });
 
@@ -223,12 +220,21 @@ public class PetugasJaga extends javax.swing.JFrame {
 
         jalamat.setText("Alamat");
 
-        Simpan.setBackground(new java.awt.Color(51, 0, 153));
-        Simpan.setForeground(new java.awt.Color(255, 255, 255));
-        Simpan.setText("Simpan");
-        Simpan.addActionListener(new java.awt.event.ActionListener() {
+        btKeluar.setBackground(new java.awt.Color(51, 0, 153));
+        btKeluar.setForeground(new java.awt.Color(255, 255, 255));
+        btKeluar.setText("Keluar");
+        btKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SimpanActionPerformed(evt);
+                btKeluarActionPerformed(evt);
+            }
+        });
+
+        btadd.setBackground(new java.awt.Color(51, 0, 153));
+        btadd.setForeground(new java.awt.Color(255, 255, 255));
+        btadd.setText("Add");
+        btadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btaddActionPerformed(evt);
             }
         });
 
@@ -240,32 +246,33 @@ public class PetugasJaga extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                        .addComponent(bttambah_petugas))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btedit)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(bthapus)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Simpan))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jpetugas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jalamat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField4)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtid, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(jid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jnomor, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtnomor, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(17, 17, 17))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jnomor, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(76, 76, 76))
-                    .addComponent(jTextField2))
+                                .addComponent(btadd)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btbersih)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btdelete)
+                                .addGap(99, 99, 99)
+                                .addComponent(btKeluar))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 407, Short.MAX_VALUE)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtalamat, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtpetugas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -273,32 +280,31 @@ public class PetugasJaga extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(bttambah_petugas))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jid)
                     .addComponent(jnomor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtnomor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpetugas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtpetugas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jalamat)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtalamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bthapus)
-                    .addComponent(btedit)
-                    .addComponent(Simpan))
+                    .addComponent(btdelete)
+                    .addComponent(btbersih)
+                    .addComponent(btKeluar)
+                    .addComponent(btadd))
                 .addContainerGap())
         );
 
@@ -334,10 +340,6 @@ public class PetugasJaga extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_bjadwalActionPerformed
 
-    private void bttambah_petugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttambah_petugasActionPerformed
-    
-    }//GEN-LAST:event_bttambah_petugasActionPerformed
-
     private void blogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blogoutActionPerformed
         // TODO add your handling code here:
         new LoginAdmin().setVisible(true);
@@ -350,29 +352,47 @@ public class PetugasJaga extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_blokasiActionPerformed
 
-    private void bteditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteditActionPerformed
-    
-    }//GEN-LAST:event_bteditActionPerformed
+    private void btbersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbersihActionPerformed
+    txtid.setText("");
+    txtnomor.setText(""); 
+    txtpetugas.setText("");
+    txtalamat.setText("");
+    }//GEN-LAST:event_btbersihActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtidActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtnomorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnomorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtnomorActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtalamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtalamatActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtalamatActionPerformed
 
-    private void bthapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bthapusActionPerformed
+    private void btdeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdeleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bthapusActionPerformed
+    tbpetugas.setValueAt("",tbpetugas.getSelectedRow(), 0);
+    tbpetugas.setValueAt("",tbpetugas.getSelectedRow(), 1);
+    tbpetugas.setValueAt("",tbpetugas.getSelectedRow(), 2);
+    tbpetugas.setValueAt("",tbpetugas.getSelectedRow(), 3);
+    tbpetugas.setValueAt("",tbpetugas.getSelectedRow(), 4);
+    }//GEN-LAST:event_btdeleteActionPerformed
 
-    private void SimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpanActionPerformed
+    private void btKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btKeluarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SimpanActionPerformed
+    System.exit(0);
+    }//GEN-LAST:event_btKeluarActionPerformed
+
+    private void btaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btaddActionPerformed
+        // TODO add your handling code here:
+    tbpetugas.setValueAt(txtid.getText(),x,0);
+    tbpetugas.setValueAt(txtnomor.getText(),x,1);
+    tbpetugas.setValueAt(txtpetugas.getText(),x,2);
+    tbpetugas.setValueAt(txtalamat.getText(),x,3);
+    x=x+1;
+    }//GEN-LAST:event_btaddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -410,29 +430,29 @@ public class PetugasJaga extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Simpan;
     private javax.swing.JButton bdashboard;
     private javax.swing.JButton bjadwal;
     private javax.swing.JButton blogout;
     private javax.swing.JButton blokasi;
     private javax.swing.JButton bpetugas;
-    private javax.swing.JButton btedit;
-    private javax.swing.JButton bthapus;
-    private javax.swing.JButton bttambah_petugas;
+    private javax.swing.JButton btKeluar;
+    private javax.swing.JButton btadd;
+    private javax.swing.JButton btbersih;
+    private javax.swing.JButton btdelete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel jalamat;
     private javax.swing.JLabel jid;
     private javax.swing.JLabel jnomor;
     private javax.swing.JLabel jpetugas;
+    private javax.swing.JTable tbpetugas;
+    private javax.swing.JTextField txtalamat;
+    private javax.swing.JTextField txtid;
+    private javax.swing.JTextField txtnomor;
+    private javax.swing.JTextField txtpetugas;
     // End of variables declaration//GEN-END:variables
 
 }

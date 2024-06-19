@@ -3,6 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package overide.securityplanners;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +23,7 @@ import javax.swing.event.DocumentListener;
  * @author user
  */
 public class Jadwal extends javax.swing.JFrame {
+    int x=0;
 
     /**
      * Creates new form Jadwal
@@ -36,6 +43,7 @@ public class Jadwal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btdashboard = new javax.swing.JButton();
@@ -54,10 +62,9 @@ public class Jadwal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         tbAdd = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        tbEdit = new javax.swing.JButton();
+        tbjadwal = new javax.swing.JTable();
+        tbBersih = new javax.swing.JButton();
         tbDelete = new javax.swing.JButton();
-        tbSimpan = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -68,6 +75,9 @@ public class Jadwal extends javax.swing.JFrame {
         cmdShift = new javax.swing.JComboBox<>();
         cmdLokasi = new javax.swing.JComboBox<>();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        tbKeluar = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -271,7 +281,7 @@ public class Jadwal extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbjadwal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -283,14 +293,14 @@ public class Jadwal extends javax.swing.JFrame {
                 "ID", "Petugas", "Lokasi", "Tanggal", "Shift"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbjadwal);
 
-        tbEdit.setBackground(new java.awt.Color(51, 0, 153));
-        tbEdit.setForeground(new java.awt.Color(255, 255, 255));
-        tbEdit.setText("Edit");
-        tbEdit.addActionListener(new java.awt.event.ActionListener() {
+        tbBersih.setBackground(new java.awt.Color(51, 0, 153));
+        tbBersih.setForeground(new java.awt.Color(255, 255, 255));
+        tbBersih.setText("Bersihkan");
+        tbBersih.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tbEditActionPerformed(evt);
+                tbBersihActionPerformed(evt);
             }
         });
 
@@ -300,15 +310,6 @@ public class Jadwal extends javax.swing.JFrame {
         tbDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tbDeleteActionPerformed(evt);
-            }
-        });
-
-        tbSimpan.setBackground(new java.awt.Color(51, 0, 153));
-        tbSimpan.setForeground(new java.awt.Color(255, 255, 255));
-        tbSimpan.setText("Simpan");
-        tbSimpan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tbSimpanActionPerformed(evt);
             }
         });
 
@@ -348,6 +349,15 @@ public class Jadwal extends javax.swing.JFrame {
             }
         });
 
+        tbKeluar.setBackground(new java.awt.Color(51, 0, 153));
+        tbKeluar.setForeground(new java.awt.Color(255, 255, 255));
+        tbKeluar.setText("Keluar");
+        tbKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tbKeluarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -370,12 +380,11 @@ public class Jadwal extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                                 .addComponent(tbAdd)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tbEdit)
+                                .addComponent(tbBersih)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tbDelete)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                                .addComponent(tbSimpan)
-                                .addGap(14, 14, 14))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tbKeluar))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel2)
@@ -423,9 +432,9 @@ public class Jadwal extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tbAdd)
-                    .addComponent(tbEdit)
+                    .addComponent(tbBersih)
                     .addComponent(tbDelete)
-                    .addComponent(tbSimpan))
+                    .addComponent(tbKeluar))
                 .addContainerGap())
         );
 
@@ -494,20 +503,30 @@ public class Jadwal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIDJadwalActionPerformed
 
-    private void tbSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbSimpanActionPerformed
-     
-    }//GEN-LAST:event_tbSimpanActionPerformed
-
     private void tbDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbDeleteActionPerformed
         // TODO add your handling code here:
+    tbjadwal.setValueAt("",tbjadwal.getSelectedRow(), 0);
+    tbjadwal.setValueAt("",tbjadwal.getSelectedRow(), 1);
+    tbjadwal.setValueAt("",tbjadwal.getSelectedRow(), 2);
+    tbjadwal.setValueAt("",tbjadwal.getSelectedRow(), 3);
+    tbjadwal.setValueAt("",tbjadwal.getSelectedRow(), 4);
     }//GEN-LAST:event_tbDeleteActionPerformed
 
-    private void tbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbEditActionPerformed
+    private void tbBersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbBersihActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tbEditActionPerformed
+    txtIDJadwal.setText("");
+    txtNama.setText("");
+    cmdLokasi.setSelectedItem("");
+    cmdShift.setSelectedItem("");
+    }//GEN-LAST:event_tbBersihActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
-        
+    tbjadwal.setValueAt(txtIDJadwal.getText(),x,0);
+    tbjadwal.setValueAt(txtNama.getText(),x,1);
+    tbjadwal.setValueAt(cmdLokasi.getSelectedItem(),x,2);
+    tbjadwal.setValueAt(cmdShift.getSelectedItem(),x,3);
+    tbjadwal.setValueAt(jDateChooser1.getAccessibleContext(),x,4);
+    x=x+1;
     }//GEN-LAST:event_tbAddActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
@@ -541,6 +560,11 @@ public class Jadwal extends javax.swing.JFrame {
     private void cmdShiftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdShiftActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmdShiftActionPerformed
+
+    private void tbKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbKeluarActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_tbKeluarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -586,6 +610,7 @@ public class Jadwal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmdLokasi;
     private javax.swing.JComboBox<String> cmdShift;
     private javax.swing.JButton dashboard;
+    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -599,15 +624,15 @@ public class Jadwal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton jadwal;
     private javax.swing.JButton logout;
     private javax.swing.JButton lokasi;
     private javax.swing.JButton petugas;
     private javax.swing.JButton tbAdd;
+    private javax.swing.JButton tbBersih;
     private javax.swing.JButton tbDelete;
-    private javax.swing.JButton tbEdit;
-    private javax.swing.JButton tbSimpan;
+    private javax.swing.JButton tbKeluar;
+    private javax.swing.JTable tbjadwal;
     private javax.swing.JTextField txtIDJadwal;
     private javax.swing.JTextField txtNama;
     // End of variables declaration//GEN-END:variables

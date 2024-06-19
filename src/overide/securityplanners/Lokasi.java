@@ -3,12 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package overide.securityplanners;
-
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import javax.swing.JOptionPane;
 /**
  *
  * @author user
  */
 public class Lokasi extends javax.swing.JFrame {
+    int x=0;
 
     /**
      * Creates new form Lokasi
@@ -33,17 +39,17 @@ public class Lokasi extends javax.swing.JFrame {
         bjadwal = new javax.swing.JButton();
         blokasi = new javax.swing.JButton();
         blogout = new javax.swing.JButton();
-        bttambah_jadwal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        tblokasi = new javax.swing.JTable();
+        btdelete = new javax.swing.JButton();
+        btbersih = new javax.swing.JButton();
         jID = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtid = new javax.swing.JTextField();
         jlokasi = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        Simpan = new javax.swing.JButton();
+        txtlokasi = new javax.swing.JTextField();
+        btkeluar = new javax.swing.JButton();
+        btadd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,19 +139,10 @@ public class Lokasi extends javax.swing.JFrame {
                 .addContainerGap(98, Short.MAX_VALUE))
         );
 
-        bttambah_jadwal.setBackground(new java.awt.Color(51, 0, 153));
-        bttambah_jadwal.setForeground(new java.awt.Color(255, 255, 255));
-        bttambah_jadwal.setText("+ Tambah Lokasi");
-        bttambah_jadwal.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttambah_jadwalActionPerformed(evt);
-            }
-        });
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("KELOLA LOKASI");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblokasi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -156,27 +153,27 @@ public class Lokasi extends javax.swing.JFrame {
                 "ID", "Nama Lokasi"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("ID");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Nama Lokasi");
+        jScrollPane1.setViewportView(tblokasi);
+        if (tblokasi.getColumnModel().getColumnCount() > 0) {
+            tblokasi.getColumnModel().getColumn(0).setHeaderValue("ID");
+            tblokasi.getColumnModel().getColumn(1).setHeaderValue("Nama Lokasi");
         }
 
-        jButton5.setBackground(new java.awt.Color(51, 0, 153));
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Hapus");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btdelete.setBackground(new java.awt.Color(51, 0, 153));
+        btdelete.setForeground(new java.awt.Color(255, 255, 255));
+        btdelete.setText("Delete");
+        btdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btdeleteActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(51, 0, 153));
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("Edit");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btbersih.setBackground(new java.awt.Color(51, 0, 153));
+        btbersih.setForeground(new java.awt.Color(255, 255, 255));
+        btbersih.setText("Bersuhkan");
+        btbersih.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btbersihActionPerformed(evt);
             }
         });
 
@@ -184,12 +181,21 @@ public class Lokasi extends javax.swing.JFrame {
 
         jlokasi.setText("Nama Lokasi");
 
-        Simpan.setBackground(new java.awt.Color(51, 0, 153));
-        Simpan.setForeground(new java.awt.Color(255, 255, 255));
-        Simpan.setText("Simpan");
-        Simpan.addActionListener(new java.awt.event.ActionListener() {
+        btkeluar.setBackground(new java.awt.Color(51, 0, 153));
+        btkeluar.setForeground(new java.awt.Color(255, 255, 255));
+        btkeluar.setText("Keluar");
+        btkeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SimpanActionPerformed(evt);
+                btkeluarActionPerformed(evt);
+            }
+        });
+
+        btadd.setBackground(new java.awt.Color(51, 0, 153));
+        btadd.setForeground(new java.awt.Color(255, 255, 255));
+        btadd.setText("Add");
+        btadd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btaddActionPerformed(evt);
             }
         });
 
@@ -203,19 +209,21 @@ public class Lokasi extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                        .addComponent(bttambah_jadwal))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5)
+                        .addGap(6, 6, 6)
+                        .addComponent(btadd)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btbersih)
+                        .addGap(18, 18, 18)
+                        .addComponent(btdelete)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Simpan))
+                        .addComponent(btkeluar))
                     .addComponent(jID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField1)
+                    .addComponent(txtid)
                     .addComponent(jlokasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField2))
+                    .addComponent(txtlokasi))
                 .addGap(14, 14, 14))
         );
         jPanel1Layout.setVerticalGroup(
@@ -223,24 +231,23 @@ public class Lokasi extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(bttambah_jadwal))
+                .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jID)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlokasi)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtlokasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton7)
-                    .addComponent(Simpan))
+                    .addComponent(btdelete)
+                    .addComponent(btbersih)
+                    .addComponent(btkeluar)
+                    .addComponent(btadd))
                 .addContainerGap())
         );
 
@@ -288,21 +295,28 @@ public class Lokasi extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_blogoutActionPerformed
 
-    private void bttambah_jadwalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttambah_jadwalActionPerformed
+    private void btdeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btdeleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bttambah_jadwalActionPerformed
+    tblokasi.setValueAt("",tblokasi.getSelectedRow(), 0);
+    tblokasi.setValueAt("",tblokasi.getSelectedRow(), 1);
+    }//GEN-LAST:event_btdeleteActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btbersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbersihActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    txtid.setText("");
+    txtlokasi.setText("");
+    }//GEN-LAST:event_btbersihActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btkeluarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    System.exit(0);
+    }//GEN-LAST:event_btkeluarActionPerformed
 
-    private void SimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpanActionPerformed
+    private void btaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btaddActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SimpanActionPerformed
+    tblokasi.setValueAt(txtid.getText(),x,0);
+    tblokasi.setValueAt(txtlokasi.getText(),x,1);
+    }//GEN-LAST:event_btaddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -340,23 +354,23 @@ public class Lokasi extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Simpan;
     private javax.swing.JButton bdasboard;
     private javax.swing.JButton bjadwal;
     private javax.swing.JButton blogout;
     private javax.swing.JButton blokasi;
     private javax.swing.JButton bpetugas;
-    private javax.swing.JButton bttambah_jadwal;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton btadd;
+    private javax.swing.JButton btbersih;
+    private javax.swing.JButton btdelete;
+    private javax.swing.JButton btkeluar;
     private javax.swing.JLabel jID;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jlokasi;
+    private javax.swing.JTable tblokasi;
+    private javax.swing.JTextField txtid;
+    private javax.swing.JTextField txtlokasi;
     // End of variables declaration//GEN-END:variables
 }
