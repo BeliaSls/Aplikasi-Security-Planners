@@ -328,7 +328,7 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new TambahJadwal().setVisible(true);
+        new Jadwal().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
