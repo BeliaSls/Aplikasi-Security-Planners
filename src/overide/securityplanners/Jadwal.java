@@ -290,7 +290,7 @@ public class Jadwal extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "ID", "Petugas", "Lokasi", "Tanggal", "Shift"
+                "ID", "Nama Petugas", "Lokasi", "Tanggal", "Shift"
             }
         ));
         jScrollPane1.setViewportView(tbjadwal);
@@ -521,11 +521,13 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbBersihActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
+        
     tbjadwal.setValueAt(txtIDJadwal.getText(),x,0);
     tbjadwal.setValueAt(txtpetugas.getText(),x,1);
     tbjadwal.setValueAt(cmdLokasi.getSelectedItem(),x,2);
-    tbjadwal.setValueAt(cmdShift.getSelectedItem(),x,3);
-    tbjadwal.setValueAt(jDateChooser1.getAccessibleContext(),x,4);
+    tbjadwal.setValueAt(jDateChooser1.getAccessibleContext(),x,3);
+    tbjadwal.setValueAt(cmdShift.getSelectedItem(),x,4);
+    
     x=x+1;
     }//GEN-LAST:event_tbAddActionPerformed
 
