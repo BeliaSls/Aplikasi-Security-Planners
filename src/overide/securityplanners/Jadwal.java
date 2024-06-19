@@ -71,7 +71,7 @@ public class Jadwal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtIDJadwal = new javax.swing.JTextField();
-        txtNama = new javax.swing.JTextField();
+        txtpetugas = new javax.swing.JTextField();
         cmdShift = new javax.swing.JComboBox<>();
         cmdLokasi = new javax.swing.JComboBox<>();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
@@ -315,7 +315,7 @@ public class Jadwal extends javax.swing.JFrame {
 
         jLabel2.setText("ID Jadwal");
 
-        jLabel3.setText("Nama");
+        jLabel3.setText("Nama Petugas");
 
         jLabel4.setText("Lokasi");
 
@@ -329,9 +329,9 @@ public class Jadwal extends javax.swing.JFrame {
             }
         });
 
-        txtNama.addActionListener(new java.awt.event.ActionListener() {
+        txtpetugas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNamaActionPerformed(evt);
+                txtpetugasActionPerformed(evt);
             }
         });
 
@@ -388,13 +388,13 @@ public class Jadwal extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel2)
-                                    .addComponent(jLabel3)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addGap(119, 119, 119)
                                         .addComponent(jLabel6))
                                     .addComponent(txtIDJadwal)
-                                    .addComponent(txtNama))
+                                    .addComponent(txtpetugas)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel5))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
@@ -413,7 +413,7 @@ public class Jadwal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtpetugas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -513,16 +513,16 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbDeleteActionPerformed
 
     private void tbBersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbBersihActionPerformed
-        // TODO add your handling code here:
+        //txtpetugasdd your handling code here:
     txtIDJadwal.setText("");
-    txtNama.setText("");
+    txtpetugas.setText("");
     cmdLokasi.setSelectedItem("");
     cmdShift.setSelectedItem("");
     }//GEN-LAST:event_tbBersihActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
     tbjadwal.setValueAt(txtIDJadwal.getText(),x,0);
-    tbjadwal.setValueAt(txtNama.getText(),x,1);
+    tbjadwal.setValueAt(txtpetugas.getText(),x,1);
     tbjadwal.setValueAt(cmdLokasi.getSelectedItem(),x,2);
     tbjadwal.setValueAt(cmdShift.getSelectedItem(),x,3);
     tbjadwal.setValueAt(jDateChooser1.getAccessibleContext(),x,4);
@@ -549,9 +549,9 @@ public class Jadwal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_dashboardActionPerformed
 
-    private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
+    private void txtpetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpetugasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNamaActionPerformed
+    }//GEN-LAST:event_txtpetugasActionPerformed
 
     private void cmdLokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdLokasiActionPerformed
         // TODO add your handling code here:
@@ -634,6 +634,6 @@ public class Jadwal extends javax.swing.JFrame {
     private javax.swing.JButton tbKeluar;
     private javax.swing.JTable tbjadwal;
     private javax.swing.JTextField txtIDJadwal;
-    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtpetugas;
     // End of variables declaration//GEN-END:variables
 }
