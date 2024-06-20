@@ -179,7 +179,19 @@ public class Lokasi extends javax.swing.JFrame {
 
         jID.setText("ID");
 
+        txtid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtidActionPerformed(evt);
+            }
+        });
+
         jlokasi.setText("Nama Lokasi");
+
+        txtlokasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtlokasiActionPerformed(evt);
+            }
+        });
 
         btkeluar.setBackground(new java.awt.Color(51, 0, 153));
         btkeluar.setForeground(new java.awt.Color(255, 255, 255));
@@ -317,6 +329,14 @@ public class Lokasi extends javax.swing.JFrame {
     tblokasi.setValueAt(txtid.getText(),x,0);
     tblokasi.setValueAt(txtlokasi.getText(),x,1);
     }//GEN-LAST:event_btaddActionPerformed
+
+    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtidActionPerformed
+
+    private void txtlokasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtlokasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtlokasiActionPerformed
 
     /**
      * @param args the command line arguments

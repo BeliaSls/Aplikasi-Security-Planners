@@ -388,8 +388,8 @@ public class PetugasJaga extends javax.swing.JFrame {
     private void btaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btaddActionPerformed
         // TODO add your handling code here:
     tbpetugas.setValueAt(txtid.getText(),x,0);
-    tbpetugas.setValueAt(txtnomor.getText(),x,1);
-    tbpetugas.setValueAt(txtpetugas.getText(),x,2);
+    tbpetugas.setValueAt(txtpetugas.getText(),x,1);
+    tbpetugas.setValueAt(txtnomor.getText(),x,2);
     tbpetugas.setValueAt(txtalamat.getText(),x,3);
     x=x+1;
     }//GEN-LAST:event_btaddActionPerformed

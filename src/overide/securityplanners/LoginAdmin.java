@@ -84,6 +84,7 @@ public class LoginAdmin extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
 
+        jcshow_password.setBackground(new java.awt.Color(51, 0, 153));
         jcshow_password.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jcshow_password.setForeground(new java.awt.Color(255, 255, 255));
         jcshow_password.setText("Show Password");
