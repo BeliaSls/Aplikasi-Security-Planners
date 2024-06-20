@@ -17,6 +17,8 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -521,14 +523,10 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbBersihActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
-        
-    tbjadwal.setValueAt(txtIDJadwal.getText(),x,0);
-    tbjadwal.setValueAt(txtpetugas.getText(),x,1);
-    tbjadwal.setValueAt(cmdLokasi.getSelectedItem(),x,2);
-    tbjadwal.setValueAt(jDateChooser1.getAccessibleContext(),x,3);
-    tbjadwal.setValueAt(cmdShift.getSelectedItem(),x,4);
-    
-    x=x+1;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+    String tanggal = dateFormat.format(jDateChooser1.getDate());
+    DefaultTableModel model = (DefaultTableModel) tbjadwal.getModel();
+    model.insertRow(0, new Object[]{txtIDJadwal.getText(), txtpetugas.getText(), cmdLokasi.getSelectedItem().toString(), tanggal, cmdShift.getSelectedItem().toString()});
     }//GEN-LAST:event_tbAddActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
