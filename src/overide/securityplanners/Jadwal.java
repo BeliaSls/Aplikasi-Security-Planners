@@ -17,13 +17,16 @@ import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
  * @author user
  */
 public class Jadwal extends javax.swing.JFrame {
-    int x=0;
+    int x = 0;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
     /**
      * Creates new form Jadwal
@@ -521,14 +524,16 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbBersihActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
+     Date date = jDateChooser1.getDate();
+     String dateString = dateFormat.format(date);
         
-    tbjadwal.setValueAt(txtIDJadwal.getText(),x,0);
-    tbjadwal.setValueAt(txtpetugas.getText(),x,1);
-    tbjadwal.setValueAt(cmdLokasi.getSelectedItem(),x,2);
-    tbjadwal.setValueAt(jDateChooser1.getAccessibleContext(),x,3);
-    tbjadwal.setValueAt(cmdShift.getSelectedItem(),x,4);
-    
-    x=x+1;
+        tbjadwal.setValueAt(txtIDJadwal.getText(), x, 0);
+        tbjadwal.setValueAt(txtpetugas.getText(), x, 1);
+        tbjadwal.setValueAt(cmdLokasi.getSelectedItem(), x, 2);
+        tbjadwal.setValueAt(dateString, x, 3);
+        tbjadwal.setValueAt(cmdShift.getSelectedItem(), x, 4);
+
+        x = x + 1;
     }//GEN-LAST:event_tbAddActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
