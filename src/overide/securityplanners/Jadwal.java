@@ -524,6 +524,7 @@ public class Jadwal extends javax.swing.JFrame {
     }//GEN-LAST:event_tbBersihActionPerformed
 
     private void tbAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tbAddActionPerformed
+
      Date date = jDateChooser1.getDate();
      String dateString = dateFormat.format(date);
         
